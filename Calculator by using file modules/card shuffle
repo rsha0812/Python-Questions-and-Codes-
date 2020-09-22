@@ -1,0 +1,8 @@
+def card(n):
+	if n==1:
+		return n
+	else:
+		return n * card(n-1)
+
+z = int(input("Enter the number of cards to shuffle: "))
+print("possible ways to shuffle card: ", card(z))

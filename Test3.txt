@@ -1,0 +1,8 @@
+# Open a file
+fo = open("foo.txt", "w+")
+#fo.write( "Python is a great language.\nYeah itsgreat!!\n") #\n = for new line
+a = fo.read()
+print(a)
+
+# Close opend file
+fo.close()

@@ -1,0 +1,13 @@
+#Create a Temprature class:
+
+class Temp():
+	
+	def convertFahrenheit(self,c):
+		return (c * 1.8)+32
+	
+	def convertCelsius(self,f):
+		return (f-32)*0.5556
+		
+obj = Temp()
+print(obj.convertFahrenheit(30))
+print(obj.convertCelsius(96))

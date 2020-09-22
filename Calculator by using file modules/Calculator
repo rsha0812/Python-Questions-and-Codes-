@@ -1,0 +1,28 @@
+from Addn import *
+from subn import *
+from muln import *
+from divn import *
+
+
+print("Select the operator")
+print("+")
+print("-")
+print("*")
+print("/")
+choose = input("Enter the operator: ")
+print("Enter the two number: ")
+x = int(input("Enter the first number: "))
+y = int(input("Enter the second number: "))
+
+
+
+if choose == '+':
+   print(x,"+",y,"=", add(x,y))
+elif choose == '-':
+   print(x,"-",y,"=", sub(x,y))
+elif choose == '*':
+   print(x,"*",y,"=", mul(x,y))
+elif choose == '/':
+   print(x,"/",y,"=", div(x,y))
+else:
+print("Invalid input")

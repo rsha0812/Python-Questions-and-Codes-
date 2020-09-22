@@ -1,0 +1,14 @@
+#To Calculate Area and Circumference of circle using given radius:
+
+class Circle():
+	def __init__(self,r):
+		self.radius= r
+	def getarea(self):
+		a = 3.14*self.radius*self.radius
+		return a
+	def getcircumference(self):
+		c = 2*3.14*self.radius
+		return c
+obj = Circle(5)
+print(obj.getarea())
+print(obj.getcircumference())

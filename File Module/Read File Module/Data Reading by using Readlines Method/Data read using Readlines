@@ -1,0 +1,14 @@
+#f = open('student1.txt',mode ='r')
+#data1 = f.readline() # o/p = Rahul
+#data2 = f.readline() # o/p = Sonam
+#print(data1, end='')
+#print(data2)
+#f.close()
+#****************************************
+# Readlines Usage:
+f = open('student1.txt', mode='r')
+data = f.readlines()
+print(data)
+for i in data:
+	print(i, end='')
+f.close()

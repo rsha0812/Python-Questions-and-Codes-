@@ -1,0 +1,23 @@
+# Creating a class to Display Student's Detail#
+
+
+class Student():
+    def __init__(self,n,r):
+        self.name = n
+        self.rollno = r
+        
+    def Display(self):
+        print("Name: ",self.name)
+        print("Rollno: ",self.rollno)
+        
+    def setAge(self, age):
+        self.age = age
+        print("Age: ", self.age)
+    def setMarks(self, marks):
+        self.marks = marks 
+        print("Marks: ",self.marks)
+        
+std = Student('Rahul',101)
+std.Display()
+std.setAge(25)
+std.setMarks(80)

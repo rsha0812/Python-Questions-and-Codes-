@@ -1,0 +1,39 @@
+def add(tim):
+    hr = tim['hrs']
+    mn = tim['mns']
+    hd = tim['hds']
+    md = tim['mds']
+    if((hr+hd)<=12 ) and ((mn+md)<=60):
+        return(hr+hd), (mn+md)
+    elif((hr+hd)<=12 ) and ((mn+md)>=60): 
+        return(hr+hd+1), ((mn+md)-60)
+    elif((hr+hd)>=12 ) and ((mn+md)>=60):
+        return((hr+hd)%12+1), ((mn+md)-60)
+    else: 
+        return((hr+hd)%12+1), (mn+md)
+        
+def sub(tim):
+    hr = tim['hrs']
+    mn = tim['mns']
+    hd = tim['hds']
+    md = tim['mds']
+    if (hr>hd) and ((mn-md)>=60) and (mn>md):
+        return((hr-hd)-1),((mn-md)-60)
+    elif (hr>hd) and ((mn-md)<=60) and (mn>md):
+        return (hr-hd),(mn-md)
+    elif(hr<hd) and ((mn-md)>=60) and (mn>md):
+        return (((hr-hd)%12)-1),((mn-md)-60)
+    elif(hr<hd) and ((mn-md)<=60) and (mn>md):
+        return ((hr-hd)%12),(mn-md)
+    else:
+        print("Time Error: Minute cannot be greater than 60")
+    
+h = int(input("Enter the hour: "))
+m = int(input("Enter the min: "))
+hrd = int(input("Enter diff in hours: "))
+mnd = int(input("Enter diff in minutes: "))
+tim = {'hrs':h, 'mns':m, 'hds':hrd,'mds': mnd}
+addn = add(tim)
+print(addn)
+subn = sub(tim)
+print(subn)
